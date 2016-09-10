@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.skku.httphumanict.fcsnsprojectver001">
-    <!-- android permission -->
+    package="edu.skku.humanict.fcsnsproject">
+    <!-- [android permission] -->
     <uses-permission android:name="android.permission.INTERNET"/>
-    <!-- /android permission -->
+    <!-- /[android permission] -->
 
     <application
         android:allowBackup="true"
@@ -11,8 +11,10 @@
         android:icon="@drawable/icon_512"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:name="android.support.multidex.MultiDexApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".app.activity.FCSNSLogoActivity" android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name="edu.skku.humanict.fcsnsproject.app.activity.FCSNSLogoActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +22,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.activity.FCSNSRoomActivity"
+        <activity android:name="edu.skku.humanict.fcsnsproject.app.activity.FCSNSRoomActivity"
             android:windowSoftInputMode="adjustPan"
             android:hardwareAccelerated="true">
         </activity>
     </application>
+    <!-- [service] -->
+    <service
+        android:name=".app.service.FCSNSFirebaseMessagingService">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+        </intent-filter>
+    </service>
 
+    <service
+        android:name=".app.service.FCSNSFirebaseInstanceIDService">
+        <intent-filter>
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+        </intent-filter>
+    </service>
+    <!-- /[service] -->
 </manifest>

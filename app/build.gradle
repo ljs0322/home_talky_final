@@ -4,11 +4,16 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
     defaultConfig {
-        applicationId "edu.skku.httphumanict.fcsnsprojectver001"
+        applicationId "edu.skku.humanict.fcsnsproject"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
     }
     buildTypes {
         release {
@@ -25,7 +30,15 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile files('libs/gson-2.2.4.jar')
-    compile 'com.squareup.okhttp:okhttp:2.7.2'
+    //compile 'com.squareup.okhttp:okhttp:2.7.2'
 
-    //
+    // 추가 부분
+    compile 'com.google.firebase:firebase-messaging:9.0.0'
+    compile 'com.google.firebase:firebase-database:9.2.1'
+    // okhttp
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    // multiDex
+    compile 'com.android.support:multidex:1.0.1'
 }
+
+apply plugin: 'com.google.gms.google-services'
