@@ -9,5 +9,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".app.activity.FCSNSLogoActivity"
     android:background="@drawable/splash">
-
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkGray"
+            android:text="아버지"
+            android:id="@+id/al_rbtn_dad"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkGray"
+            android:text="어머니"
+            android:id="@+id/al_rbtn_mom"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkGray"
+            android:text="아들"
+            android:id="@+id/al_rbtn_son"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkGray"
+            android:text="딸"
+            android:id="@+id/al_rbtn_daughter"/>
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:textStyle="bold"
+        android:text="시작하기"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp"
+        android:onClick="mStartBtnClick"
+        android:id="@+id/al_btn_start" />
 </RelativeLayout>

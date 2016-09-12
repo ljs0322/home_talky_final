@@ -70,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="전송"
-        android:id="@+id/button"
+        android:id="@+id/ar_edt_chat"
         android:layout_weight="1" />
 
 </LinearLayout>
@@ -93,32 +93,35 @@
             android:background="@drawable/status_dad_panel"
             android:layout_gravity="center"/>
 
-        <Spinner
+        <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:id="@+id/spinner2"
             android:layout_weight="1"
-            android:textAlignment="center"
             android:background="@drawable/status_mom_panel"
-            android:layout_gravity="center"/>
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="식사중" />
 
-        <Spinner
+        <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:id="@+id/spinner3"
             android:layout_weight="1"
-            android:background="@drawable/status_daugter_panel"
+            android:background="@drawable/status_mom_panel"
             android:textAlignment="center"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="운동중" />
 
-        <Spinner
+        <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:id="@+id/spinner4"
             android:layout_weight="1"
-            android:background="@drawable/status_son_panel"
+            android:background="@drawable/status_mom_panel"
             android:textAlignment="center"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="회의중" />
     </LinearLayout>
 
     <LinearLayout
